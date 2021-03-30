@@ -23,6 +23,13 @@ final otpInputDecoration = InputDecoration(
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
       borderRadius: BorderRadius.circular(getProportionateScreenWidth(25)),
-      borderSide: BorderSide(color: kTextColor),
+      borderSide: BorderSide(color: kTextColor, width: 0),
       gapPadding: 4);
 }
+
+final RegExp emailValidatorRegExp =
+RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+
+const baseDevUrl = "https://api.thecatapi.com/v1";
+const baseStagingUrl = "";
+const baseProUrl = "";

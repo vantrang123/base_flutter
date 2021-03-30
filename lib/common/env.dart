@@ -1,3 +1,5 @@
+import 'package:flutter_app/common/constants.dart';
+
 class Env {
   final String baseUrl;
 
@@ -5,7 +7,7 @@ class Env {
 }
 
 mixin EnvValue {
-  static final Env development = Env('https://booksdemo.herokuapp.com');
-  static final Env staging = Env('https://booksdemo.herokuapp.com');
-  static final Env production = Env('https://booksdemo.herokuapp.com');
+  static final Env development = Env(baseDevUrl);
+  static final Env staging = Env(baseStagingUrl);
+  static final Env production = Env(baseProUrl);
 }
